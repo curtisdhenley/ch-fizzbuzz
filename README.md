@@ -1,3 +1,3 @@
-# ch-fizzbuzz
+# js-fizzbuzz
 
 ***Live Link: ***
