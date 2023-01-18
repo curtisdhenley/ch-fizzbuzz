@@ -1,3 +1,3 @@
 # js-fizzbuzz
 
-***Live Link: ***
+***Live Link: https://ch-fizzbuzz.netlify.app/***
