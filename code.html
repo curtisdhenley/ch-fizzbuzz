@@ -86,7 +86,7 @@
                             // get the values from the page
                             let startValue = document.getElementById('startValue').value;
                             
-                            let endingValue = document.getElementById('endingValue').value;
+                            let count = document.getElementById('count').value;
                             
                             let fizzValue = document.getElementById('fizzValue').value;
                             
@@ -95,16 +95,16 @@
                             // parse string into ints
                             startValue = parseInt(startValue);
                             
-                            endingValue = parseInt(endingValue);
+                            count = parseInt(count);
                             
                             fizzValue = parseInt(fizzValue);
                             
                             buzzValue = parseInt(buzzValue);
                             
                             // verify inputs are numbers
-                            if (Number.isInteger(startValue) && Number.isInteger(endingValue) && Number.isInteger(fizzValue) && Number.isInteger(buzzValue)) {
+                            if (Number.isInteger(startValue) && Number.isInteger(count) && Number.isInteger(fizzValue) && Number.isInteger(buzzValue)) {
                                 // if they are, generate numbers
-                                let numbersArray = generateFizzBuzz(startValue, endingValue);
+                                let numbersArray = generateFizzBuzz(startValue, count);
                                 
                                 // then display them on the page
                                 displayFizzBuzz(numbersArray, fizzValue, buzzValue);
@@ -182,10 +182,14 @@
                 <p>The code is structured in three functions</p>
                 <h5><code>getValues()</code></h5>
                 <p>This function grabs the numbers input by the user.</p>
-                <h5><code>generateFizzBuzz(startValue, endingValue)</code></h5>
-                <p>This function generates a range of numbers between the starting and ending value provided by the user. Then it checks to see if the numbers in the generated range are divisible by the "Fizz" and "Buzz" values provided by the user.</p>
+                <h5><code>generateFizzBuzz(startValue, count)</code></h5>
+                <p>This function generates a range of numbers between the starting and ending value provided by the
+                    user. Then it checks to see if the numbers in the generated range are divisible by the "Fizz" and
+                    "Buzz" values provided by the user.</p>
                 <h5><code>displayFizzBuzz(numbersArray, fizzValue, buzzValue)</code></h5>
-                <p>This function displays the numbers on the screen and provides "Fizz", "Buzz", and "FizzBuzz" class names to be able to style their own individual backgrounds with CSS to easily distinguish between them.</p>
+                <p>This function displays the numbers on the screen and provides "Fizz", "Buzz", and "FizzBuzz" class
+                    names to be able to style their own individual backgrounds with CSS to easily distinguish between
+                    them.</p>
             </div>
         </div>
     </main>
