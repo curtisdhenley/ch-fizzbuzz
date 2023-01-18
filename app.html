@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0 shrink-to-fit=no">
-    <title>App Name: A Coding Challenge</title>
+    <title>FizzBuzz: A Coding Challenge</title>
 
     <!-- favicon -->
     <link rel="shortcut icon" href="/img/logo-favicon.PNG" type="image/x-icon">
@@ -32,7 +32,7 @@
                 <a class="navbar-brand" href="#">
                     <img src="/img/curtis-henley-low-resolution-logo-color-on-transparent-background.png" height="50px"
                         alt="Curtis Henley logo">
-                    App Name
+                    FizzBuzz
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -54,8 +54,8 @@
                         </li>
                         <li class="nav-item">
                             <!-- MAKE SURE LINK MATCHES REPO OF APP BEING DEMO'D -->
-                            <a class="nav-link" href="https://github.com/curtisdhenley?tab=repositories"
-                                target="_blank">The Repo</a>
+                            <a class="nav-link" href="https://github.com/curtisdhenley/js-fizzbuzz" target="_blank">The
+                                Repo</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">About</a>
@@ -69,10 +69,55 @@
         </nav>
     </header>
 
-    <main class="content container">
-        <h1>APP UI GOES HERE</h1>
-        <input type="text" id="message" placeholder="Enter a Message...">
-        <button class="btn btn-primary" type="button" id="btnSubmit">Display a message</button>
+    <main class="content container px-4 py-5 mt-5">
+        <div class="row h-100 row-cols-1 row-cols-md-2 gy-2">
+            <div class="col border-2 border-end">
+                <h1 class="fw-bold mb-3">FizzBuzz: A Coding Challenge</h1>
+                <h4 class="lead">An app that utilizes the "Fizz Buzz" Coding challenge. It loops through a given range
+                    of numbers, checks each number to see if it's divisible by one of or both of the given values, and
+                    will display either "Fizz" if its divisible by the first value, "Buzz" if its divisible by the second value, or
+                    "FizzBuzz" if its divisible by both the given values.
+                </h4>
+                <h2 class="mt-5 border-2 border-bottom">Instructions</h2>
+                <p>Enter a starting value and an ending value. Also select a value for "Fizz" and "Buzz". Press the "Run" button to start.</p>
+            </div>
+            <div class="col">
+                <h4>Enter Values</h4>
+                <form action="#" class="row gy-2 gx-3">
+                    <div class="col">
+                        <label for="startValue" class="form-label">Starting number</label>
+                        <input type="number" id="startValue" class="form-control" placeholder="Starting value"
+                            aria-label="starting value" value="0">
+                    </div>
+                    <div class="col">
+                        <label for="endingValue" class="form-label">Ending Number</label>
+                        <input type="number" id="endingValue" class="form-control" placeholder="Ending value"
+                            aria-label="ending value" value="100">
+                    </div>
+                    <div class="col">
+                        <label for="fizzValue" class="form-label">Fizz value</label>
+                        <input type="number" id="fizzValue" class="form-control" placeholder="Fizz value"
+                            aria-label="Fizz value" value="3">
+                    </div>
+                    <div class="col">
+                        <label for="buzzValue" class="form-label">Buzz value</label>
+                        <input type="number" id="buzzValue" class="form-control" placeholder="Buzz value"
+                            aria-label="Buzz value" value="5">
+                    </div>
+                    <div class="col-12 text-end">
+                        <button class="btn btn-dark btn-lg" id="btnSubmit" type="button">Run</button>
+                    </div>
+                </form>
+                <h2 class="mt-5 border-bottom border-2">Results</h2>
+                <div class="table-responsive">
+                    <table class="table table-striped text-center">
+                        <tbody id="results">
+                            <!-- Results displayed here -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
     </main>
 
     <footer class="container-fluid mt-5">
@@ -112,7 +157,7 @@
     <!-- JS Scripts -->
     <script src="/js/site.js"></script>
     <script>
-        document.getElementById('btnSubmit').addEventListener('click', displayMsg);
+        document.getElementById('btnSubmit').addEventListener('click', getValues);
     </script>
 </body>
 

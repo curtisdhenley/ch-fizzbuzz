@@ -119,3 +119,17 @@ footer {
     font-size: 1.8rem;
     padding-left: .5rem;
 }
+
+/* table styling */
+.fizz {
+    background-color: var(--ch-highlight-color) !important;
+}
+
+.buzz {
+    background-color: var(--ch-dark-color) !important;
+    color: var(--ch-light-color) !important;
+}
+
+.fizzBuzz {
+    background-color: var(--ch-primary-color) !important;
+}
